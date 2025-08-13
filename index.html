@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>TODO APP</title>
+  </head>
+  <body>
+    <div id="overlay">
+      <div id="spinner"></div>
+    </div>
+    <header class="header">
+      <a href="index.html" class="header-logo">TODO APP</a>
+    </header>
+    <div class="container-title">
+      <h1 class="app-title">To do List</h1>
+    </div>
+    <form id="signup-form" class="form-container">
+      <h2 class="form-title">Регистрация</h2>
+      <input
+        type="email"
+        id="signup-email"
+        class="form-input"
+        placeholder="Email"
+        required
+      />
+      <input
+        type="password"
+        id="signup-password"
+        class="form-input"
+        placeholder="Пароль"
+        required
+      />
+      <button type="submit" class="form-button submit">
+        Зарегистрироваться
+      </button>
+      <button id="signIn" type="button" class="form-button secondary">
+        Войти
+      </button>
+      <button id="google-signup-button">Войти через Google</button>
+    </form>
+
+    <form id="signin-form" class="form-container">
+      <h2 class="form-title">Авторизация</h2>
+      <input
+        type="email"
+        id="signin-email"
+        class="form-input"
+        placeholder="Email"
+        required
+      />
+      <input
+        type="password"
+        id="signin-password"
+        class="form-input"
+        placeholder="Пароль"
+        required
+      />
+      <button type="submit" class="form-button submit">Войти</button>
+      <button id="google-signin-button">Продолжить с Google</button>
+      <button
+        id="forgot-password-button"
+        type="button"
+        class="form-button secondary"
+      >
+        Забыли пароль?
+      </button>
+    </form>
+    <form id="forgot-password-form">
+      <input
+        type="email"
+        id="forgot-password-email"
+        class="form-input"
+        required
+      />
+      <button type="submit" class="form-button submit">
+        Отправить ссылку для сброса пароля
+      </button>
+    </form>
+    <div id="forgot-password-message"></div>
+    <div class="sidebar" id="sidebar">
+      <button
+        id="burger-button"
+        class="burger-button"
+        aria-expanded="false"
+        aria-controls="sidebar"
+        aria-label="Toggle menu"
+        title="Open menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <aside class="sidebar-menu">
+        <nav class="sidebar__nav">
+          <ul class="sidebar__list">
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#" data-filter="all">Все задачи</a>
+              <i class="sidebar__item--all fa-solid fa-list-check"></i>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#" data-filter="active"
+                >Активные задачи</a
+              >
+              <i class="sidebar__item--active fa-solid fa-hourglass-start"></i>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#" data-filter="important"
+                >Важные задачи</a
+              >
+              <i class="sidebar__item--important fa-solid fa-star"></i>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#" data-filter="completed"
+                >Выполненные задачи</a
+              >
+              <i class="sidebar__item--completed fa-solid fa-square-check"></i>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#" data-filter="today"
+                >Задачи на день</a
+              >
+              <i class="sidebar__item--today fa-solid fa-calendar-day"></i>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#" data-filter="week"
+                >Задачи на неделю</a
+              >
+              <i class="sidebar__item--week fa-solid fa-calendar-week"></i>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#" data-filter="month"
+                >Задачи на месяц</a
+              >
+              <i class="sidebar__item--month fa-solid fa-calendar-days"></i>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+    </div>
+
+    <div id="task-container">
+      <div class="input-block">
+        <input type="text" id="task-input" placeholder="Введите задачу" />
+        <button id="add-button">
+          <img src="./assets/icons/icon-add.png" class="icons" />
+        </button>
+      </div>
+      <div class="container" id="posts-container"></div>
+      <button id="delete-completed-button">
+        Удалить все выполненные задачи
+      </button>
+    </div>
+    <button id="logout-button" class="logout-button">Выйти</button>
+    <script src="./src/app.js" type="module"></script>
+  </body>
+</html>
