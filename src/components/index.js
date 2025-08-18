@@ -1,4 +1,4 @@
-export * from "./inits/initDragAndDrop.js";
+export * from "./inits/initDragAndDropUniversal.js";
 export * from "./inits/initDeleteCompleted.js";
 export * from "./inits/initDelete.js";
 export * from "./inits/initAddTodo.js";

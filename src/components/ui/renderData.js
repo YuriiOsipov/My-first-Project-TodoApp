@@ -1,5 +1,6 @@
 import { hideLoader } from "../../utils/healpers.js";
 import { createTodoElement } from "./createElements/createTodoElement.js";
+import { initDragAndDropUniversal } from "../index.js";
 
 export const container = document.getElementById("posts-container");
 
@@ -25,6 +26,8 @@ export function renderData(todos) {
 
     container.append(todoElement);
   });
+
+  initDragAndDropUniversal(container);
 
   hideLoader();
 }

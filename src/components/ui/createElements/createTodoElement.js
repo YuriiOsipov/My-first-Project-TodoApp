@@ -16,8 +16,9 @@ import {
   createRadioInputDay,
   createRadioInputWeek,
   createRadioInputMonth,
+  createHandleElement,
 } from "../index.js";
-import { initDragAndDrop, initDeadlineRadios } from "../../index.js";
+import { initDeadlineRadios } from "../../index.js";
 
 export function createTodoElement(todo, container) {
   const todoElement = document.createElement("div");
@@ -25,6 +26,7 @@ export function createTodoElement(todo, container) {
   todoElement.setAttribute("data-id", todo.id);
 
   const containerCheckbox = createContainerCheckbox();
+  const handle = createHandleElement();
   const fieldset = createFieldset(todo);
   const legend = createLegend();
   const radioLabelDay = createRadioLabelDay(todo);
@@ -53,9 +55,14 @@ export function createTodoElement(todo, container) {
 
   containerCheckbox.append(labelCheckbox, fieldset, labelImportant);
 
-  todoElement.append(containerCheckbox, textElement, timeElement, deleteButton);
+  todoElement.append(
+    handle,
+    containerCheckbox,
+    textElement,
+    timeElement,
+    deleteButton
+  );
   initDeadlineRadios(todo, todoElement);
-  initDragAndDrop(todoElement, todo, container);
 
   return todoElement;
 }

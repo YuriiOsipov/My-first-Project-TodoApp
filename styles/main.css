@@ -257,7 +257,6 @@ body {
   margin-bottom: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  cursor: grab;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -279,6 +278,35 @@ body {
   font-size: 16px;
   color: #888;
   cursor: grab;
+}
+
+/* убери старую ::before-иконку, если была */
+.todo::before {
+  content: none;
+}
+
+.todo__handle {
+  background: none;
+  border: none;
+  cursor: grab;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.todo__handle:active {
+  cursor: grabbing;
+}
+
+.placeholder {
+  background: rgba(0, 0, 0, 0.1);
+  border: 2px dashed #aaa;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+}
+
+/* когда реально тянем — режем скролл жестами */
+.drag-active {
+  touch-action: none;
 }
 
 .todo:hover {
@@ -787,4 +815,45 @@ body {
     width: 40px;
     padding: 4px 4px;
   }
+}
+
+/* перетаскиваемый элемент */
+.todo--dragging {
+  opacity: 0.9;
+  cursor: grabbing;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  transform: scale(1.01);
+}
+
+/* placeholder, занимает место dragged */
+.todo-placeholder {
+  border: 2px dashed #2d2bb7;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  background: rgba(45, 43, 183, 0.06);
+  animation: pulse 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* handle выглядит как «решётка» */
+.todo__handle {
+  align-self: flex-start;
+  border: 0;
+  background: transparent;
+  cursor: grab;
+  font-size: 18px;
+  padding: 4px 8px;
+  user-select: none;
+  touch-action: none; /* важно для тача */
+}
+.todo__handle:active {
+  cursor: grabbing;
 }

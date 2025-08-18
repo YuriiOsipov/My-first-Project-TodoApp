@@ -15,3 +15,7 @@ export * from "./createElements/createRadioInputMonth.js";
 export * from "./createElements/createText.js";
 export * from "./createElements/createTime.js";
 export * from "./createElements/createUpdateButton.js";
+export * from "./createElements/createHandleElement.js";
+
+export * from "./dragAndDropElements/createPlaceholder.js";
+export * from "./dragAndDropElements/moveDrag.js";
