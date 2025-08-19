@@ -17,7 +17,7 @@ export * from "./ui/sidebarElements/closeSidebar.js";
 export * from "./ui/sidebarElements/openSidebar.js";
 export * from "./ui/sidebarElements/toggleSidebar.js";
 
-export * from "./ui/filteredSidebar/filteredTasks.js";
+export * from "./ui/sidebarElements/filteredTasks.js";
 
 export * from "./auth/signUp.js";
 export * from "./auth/signIn.js";
