@@ -4,11 +4,7 @@ import {
   sendEmailVerification,
 } from "../../firebaseConfig.js";
 import { signWithGoogle } from "./googleAuth.js";
-import {
-  showSuccess,
-  showError,
-  showWarning,
-} from "../../utils/notification.js";
+import { showInfo, showError, showWarning } from "../../utils/notification.js";
 const signupForm = document.getElementById("signup-form");
 const signinForm = document.getElementById("signin-form");
 const signInButton = document.getElementById("signIn");
@@ -39,7 +35,7 @@ signupForm.addEventListener("submit", async (event) => {
     const user = userCredential.user;
     await sendEmailVerification(user);
 
-    showSuccess(
+    showInfo(
       "Для входа необходимо верифицировать email. Пожалуйста,проверьте свою почту"
     );
     signupForm.reset();
