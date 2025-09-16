@@ -13,9 +13,7 @@ export function initApp() {
   onAuthStateChanged(auth, (user) => {
     if (user) {
       if (!user.emailVerified) {
-        showWarning(
-          "Ваш email не верифицирован. Пожалуйста, проверьте Вашу почту"
-        );
+        showWarning("Your email is not verified. Please check your mail.");
         return;
       }
       loadData();
