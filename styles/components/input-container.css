@@ -1,0 +1,42 @@
+.input-block {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+/* Контейнер для ввода задачи */
+#task-input {
+  width: 100%;
+
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#task-input:focus {
+  border-color: var(--color-main);
+}
+
+#add-button {
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#add-button:hover {
+  background-color: #089d17;
+}
+
+.icons {
+  width: 48px;
+}

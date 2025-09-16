@@ -1,0 +1,87 @@
+/* Sidebar */
+.sidebar {
+  display: none;
+}
+
+.sidebar-menu {
+  position: fixed;
+  top: 0;
+  left: -350px;
+  width: 350px;
+  height: 100vh;
+  background-color: #fefdfd;
+  padding: 100px 20px;
+  box-shadow: 5px 0px 30px 0px rgba(0, 0, 0, 0.5);
+
+  transition: transform 0.3s ease;
+  z-index: 102;
+  overflow: auto;
+}
+
+.sidebar.open .sidebar-menu {
+  transform: translateX(100%);
+}
+
+.sidebar__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  list-style: none;
+}
+
+.sidebar__item {
+  border-radius: 6px;
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  padding-right: 34px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #e7e5e5;
+  }
+}
+
+/* Цвета иконок */
+
+.sidebar__item--all {
+  color: rgb(221, 33, 33);
+}
+
+.sidebar__item--active {
+  color: rgb(25, 110, 53);
+}
+
+.sidebar__item--important {
+  color: rgb(233, 205, 43);
+}
+
+.sidebar__item--completed {
+  color: rgb(15, 197, 15);
+}
+
+.sidebar__item--today {
+  color: purple;
+}
+
+.sidebar__item--week {
+  color: brown;
+}
+
+.sidebar__item--month {
+  color: rgb(160, 99, 218);
+}
+
+.sidebar__link {
+  display: block;
+  width: 100%;
+  padding-inline: 20px;
+
+  height: 50px;
+  line-height: 50px;
+
+  text-decoration: none;
+  color: #333;
+}

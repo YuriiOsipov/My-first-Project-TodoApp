@@ -1,0 +1,35 @@
+/* Адаптив */
+
+@media (max-width: 480px) {
+  .container-title {
+    padding-top: 80px;
+  }
+
+  .logout-button {
+    font-size: 12px;
+    right: 10px;
+  }
+
+  .todo {
+    padding: 0.75rem;
+  }
+
+  .form-container {
+    padding: 1rem;
+  }
+
+  .checkbox,
+  .checkbox-important {
+    padding: 10px;
+  }
+
+  .text-element {
+    justify-content: space-around;
+  }
+
+  .button-change,
+  .button-function {
+    width: 40px;
+    padding: 4px 4px;
+  }
+}

@@ -1,0 +1,35 @@
+/* Иконка для перетаскивания */
+.todo::before {
+  content: "⠿⠿";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #888;
+  cursor: grab;
+}
+
+/* убери старую ::before-иконку, если была */
+.todo::before {
+  content: none;
+}
+
+.todo__handle:active {
+  cursor: grabbing;
+}
+
+/* handle выглядит как «решётка» */
+.todo__handle {
+  align-self: flex-start;
+  border: 0;
+  background: transparent;
+  cursor: grab;
+  font-size: 18px;
+  padding: 4px 8px;
+  user-select: none;
+  touch-action: none; /* важно для тача */
+}
+.todo__handle:active {
+  cursor: grabbing;
+}

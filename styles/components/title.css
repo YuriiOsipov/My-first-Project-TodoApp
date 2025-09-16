@@ -1,0 +1,38 @@
+/* Основные стили для заголовка */
+.container-title {
+  padding-top: 100px;
+}
+
+.app-title {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: transparent;
+  background: linear-gradient(45deg, var(--color-main), #00bfff, #00ffbf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: gradientShift 5s infinite alternate;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Анимация для градиента */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Эффект при наведении */
+.app-title:hover {
+  user-select: none;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}

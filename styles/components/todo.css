@@ -1,0 +1,39 @@
+/* Стили для каждой задачи */
+.todo {
+  background: var(--color-primary);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+.todo.over {
+  border: 2px dashed var(--color-main);
+  background-color: #e9f5ff;
+}
+
+.todo:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.todo:active::before {
+  cursor: grabbing;
+}
+/* когда реально тянем — режем скролл жестами */
+.drag-active {
+  touch-action: none;
+}
+
+.todo.dragging {
+  opacity: 0.6;
+  transform: scale(0.98);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #f8f9fa;
+}

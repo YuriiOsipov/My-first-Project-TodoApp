@@ -1,0 +1,43 @@
+@media (min-width: 768px) {
+  .todo {
+    padding-left: 50px;
+  }
+
+  .container__checkbox {
+    margin-bottom: 20px;
+  }
+
+  .radio__container legend {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  .todo p {
+    margin: 8px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding: 15px;
+  }
+
+  .header-logo {
+    font-size: 2rem;
+  }
+
+  .app-title {
+    font-size: 3rem;
+  }
+
+  .logout-button {
+    padding: 5px 10px;
+  }
+
+  .radio__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+}
