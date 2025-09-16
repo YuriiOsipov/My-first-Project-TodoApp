@@ -8,7 +8,7 @@ export function initChangeStatus(todo, checkbox) {
       await toggleTodoStatus(todo, checkbox.checked);
       await loadData();
     } catch (error) {
-      showError("Не удалось изменить статус задачи!");
+      showError("Failed to change task status!");
     }
   });
 }

@@ -1,20 +1,3 @@
-/* Иконка для перетаскивания */
-.todo::before {
-  content: "⠿⠿";
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 16px;
-  color: #888;
-  cursor: grab;
-}
-
-/* убери старую ::before-иконку, если была */
-.todo::before {
-  content: none;
-}
-
 .todo__handle:active {
   cursor: grabbing;
 }

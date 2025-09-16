@@ -10,8 +10,8 @@ document.getElementById("logout-button").addEventListener("click", async () => {
     showSigninForm();
     document.getElementById("task-container").style.display = "none";
     document.getElementById("sidebar").style.display = "none";
-    showInfo("Вы вышли из приложения");
+    showInfo("You have left the application");
   } catch (error) {
-    showError("Ошибка при выходе из приложения: ", error.message);
+    showError("Error exiting the application:", error.message);
   }
 });

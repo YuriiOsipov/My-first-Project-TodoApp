@@ -18,7 +18,7 @@ export async function loadData() {
     cachedTodos = todos.map((todo) => ({ ...todo }));
 
     if (cachedTodos.length === 0) {
-      showInfo("У вас пока нет задач");
+      showInfo("You don't have any tasks yet!");
       deleteCompletedButton.style.display = "none";
     } else {
       renderData(cachedTodos);
@@ -28,7 +28,7 @@ export async function loadData() {
   } catch (error) {
     console.error(error.message);
 
-    showError("Не удалось получить данные!");
+    showError("Failed to retrieve data!");
   } finally {
     hideLoader();
   }

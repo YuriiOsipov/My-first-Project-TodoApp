@@ -15,7 +15,7 @@ document.querySelectorAll(".sidebar__link").forEach((link) => {
         dataToRender = cachedTodos.filter((task) => task.completed);
 
         if (dataToRender.length === 0) {
-          showInfo("У вас нет выполненых задач");
+          showInfo("You have no completed tasks.");
         }
 
         renderData(dataToRender);
@@ -29,7 +29,7 @@ document.querySelectorAll(".sidebar__link").forEach((link) => {
         dataToRender = cachedTodos.filter((task) => !task.completed);
 
         if (dataToRender.length === 0) {
-          showInfo("У вас нет активных задач");
+          showInfo("You have no active tasks.");
         }
 
         renderData(dataToRender);
@@ -38,7 +38,7 @@ document.querySelectorAll(".sidebar__link").forEach((link) => {
         dataToRender = cachedTodos.filter((task) => task.important);
 
         if (dataToRender.length === 0) {
-          showInfo("У вас нет важных задач");
+          showInfo("You don't have any important tasks.");
         }
 
         renderData(dataToRender);
@@ -47,7 +47,7 @@ document.querySelectorAll(".sidebar__link").forEach((link) => {
         dataToRender = cachedTodos.filter((task) => task.day);
 
         if (dataToRender.length === 0) {
-          showInfo("У вас нет задач на сегодня");
+          showInfo("You have no tasks for today");
         }
         renderData(dataToRender);
         break;
@@ -56,7 +56,7 @@ document.querySelectorAll(".sidebar__link").forEach((link) => {
         dataToRender = cachedTodos.filter((task) => task.week);
 
         if (dataToRender.length === 0) {
-          showInfo("У вас нет задач на неделю");
+          showInfo("You have no tasks for the week");
         }
         renderData(dataToRender);
         break;
@@ -65,7 +65,7 @@ document.querySelectorAll(".sidebar__link").forEach((link) => {
         dataToRender = cachedTodos.filter((task) => task.month);
 
         if (dataToRender.length === 0) {
-          showInfo("У вас нет задач на месяц");
+          showInfo("You don't have any tasks for the month");
         }
         renderData(dataToRender);
         break;

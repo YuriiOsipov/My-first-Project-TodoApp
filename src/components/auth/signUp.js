@@ -36,7 +36,7 @@ signupForm.addEventListener("submit", async (event) => {
     await sendEmailVerification(user);
 
     showInfo(
-      "Для входа необходимо верифицировать email. Пожалуйста,проверьте свою почту"
+      "To log in you need to verify your email. Please check your email."
     );
     signupForm.reset();
     hideSignupForm();
@@ -45,21 +45,17 @@ signupForm.addEventListener("submit", async (event) => {
     switch (error.code) {
       case "auth/email-already-exists":
       case "auth/email-already-in-use":
-        showWarning(
-          "Это email уже зарегистрирован. Пожалуйста, войдите в систему"
-        );
+        showWarning("This email is already registered. Please log in.");
         break;
       case "auth/invalid-email":
-        showWarning(
-          "Неверный формат email. Пожалуйста, проверьте введенные данные"
-        );
+        showWarning("Invalid email format. Please check the entered data.");
         break;
       case "auth/weak-password":
-        showWarning("Пароль должен быть не мение 6 символов");
+        showWarning("Password must be at least 6 characters");
         break;
 
       default:
-        showError("Произошла неизвестная ошибка:", error.message, error.code);
+        showError("An unknown error occurred:", error.message, error.code);
 
         break;
     }

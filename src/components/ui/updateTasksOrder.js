@@ -19,7 +19,7 @@ export async function updateTasksOrder(container) {
 
     return true;
   } catch (error) {
-    showError("Не удалось обновить порядок задач!");
+    showError("Failed to update task order!");
   } finally {
     hideLoader();
   }

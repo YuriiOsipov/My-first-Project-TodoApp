@@ -6,7 +6,7 @@ import { showConfirmation } from "../../utils/notification.js";
 export function initDeleteCompleted() {
   deleteCompletedButton.addEventListener("click", async () => {
     const isConfirmed = await showConfirmation(
-      "Все выполненные задачи будут удалены! Вы уверены?"
+      "All completed tasks will be deleted! Are you sure?"
     );
 
     if (!isConfirmed) {
@@ -17,7 +17,7 @@ export function initDeleteCompleted() {
       await deleteCompletedTodos(container);
       await loadData();
     } catch (error) {
-      showError("Не удалось удалить список задач");
+      showError("Failed to delete task list");
     }
   });
 }

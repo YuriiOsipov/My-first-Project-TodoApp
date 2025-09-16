@@ -20,7 +20,7 @@ import {
 } from "../index.js";
 import { initDeadlineRadios } from "../../index.js";
 
-export function createTodoElement(todo, container) {
+export function createTodoElement(todo) {
   const todoElement = document.createElement("div");
   todoElement.classList.add("todo");
   todoElement.setAttribute("data-id", todo.id);

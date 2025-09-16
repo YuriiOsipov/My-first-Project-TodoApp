@@ -8,8 +8,8 @@ export function createUpdateButton(todo) {
 
   const updateIcon = document.createElement("img");
   updateIcon.src = "./assets/icons/icon-update.png";
-  updateIcon.alt = "Изменить";
-  updateIcon.title = "Изменить";
+  updateIcon.alt = "Change";
+  updateIcon.title = "Change";
   updateIcon.width = 24;
 
   updateButton.append(updateIcon);

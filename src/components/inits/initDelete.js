@@ -5,7 +5,7 @@ import { showConfirmation, showError } from "../../utils/notification.js";
 export function initDelete(todo, deleteButton) {
   deleteButton.addEventListener("click", async () => {
     const isConfirmed = await showConfirmation(
-      "Вы уверены, что хотите удалить эту задачу навсегда?"
+      "Are you sure you want to delete this task permanently?"
     );
     if (!isConfirmed) {
       return;
@@ -17,7 +17,7 @@ export function initDelete(todo, deleteButton) {
 
       deleteButton.closest(".todo").remove();
     } catch (error) {
-      showError("Не удалось удалить задачу");
+      showError("Failed to delete task");
     }
   });
 }
