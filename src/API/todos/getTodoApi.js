@@ -7,7 +7,7 @@ export async function getTodos(uid, token) {
     });
 
     if (!response.ok) {
-      throw new Error(`Данные не получены. Статус: ${response.status}`);
+      throw new Error(`Data not received. Status: ${response.status}`);
     }
 
     const data = await response.json();

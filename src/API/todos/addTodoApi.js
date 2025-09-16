@@ -14,7 +14,7 @@ export async function addTodo(newTodo) {
     });
 
     if (!response.ok) {
-      throw new Error(`Не удалось добавить задачу. Статус: ${response.status}`);
+      throw new Error(`Failed to add task. Status: ${response.status}`);
     }
     return await response.json();
   } catch (error) {

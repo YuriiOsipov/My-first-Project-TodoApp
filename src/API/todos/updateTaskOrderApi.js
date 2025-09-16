@@ -18,7 +18,7 @@ export async function updateTaskOrderOnServer(taskId, order) {
 
     if (!response.ok) {
       throw new Error(
-        `Не удалось обновить порядок задач. Статус: ${response.status}`
+        `Failed to update task order. Status: ${response.status}`
       );
     }
   } catch (error) {

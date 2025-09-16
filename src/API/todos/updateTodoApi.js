@@ -14,7 +14,7 @@ export async function updateTodo(id, newText) {
     });
 
     if (!response.ok) {
-      throw new Error(`Не удалось обновить задачу. Статус: ${response.status}`);
+      throw new Error(`Failed to update task. Status: ${response.status}`);
     }
 
     return true;

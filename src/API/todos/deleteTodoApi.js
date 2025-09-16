@@ -9,7 +9,7 @@ export async function deleteTodo(id) {
       method: "DELETE",
     });
     if (!response.ok) {
-      throw new Error(`Не удалось удалить задачу. Статус: ${response.status}`);
+      throw new Error(`Failed to delete task. Status: ${response.status}`);
     }
 
     return true;

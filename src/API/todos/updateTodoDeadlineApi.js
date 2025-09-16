@@ -15,7 +15,7 @@ export async function updateTodoDeadline(id, updatedFields) {
 
     if (!response.ok) {
       throw new Error(
-        `Не удалось обновить дедлайн задачи. Дедлай: ${response.status}`
+        `Failed to update task deadline. Deadline: ${response.status}`
       );
     }
 
