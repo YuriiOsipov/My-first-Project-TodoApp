@@ -13,11 +13,11 @@ export async function signWithGoogle() {
     const result = await signInWithPopup(auth, provider);
 
     if (result._tokenResponse.isNewUser) {
-      showInfo("Регистрация через Google прошла успешно");
+      showInfo("Registration via Google was successful");
     } else {
-      showInfo("Вход через Google выполнен успешно");
+      showInfo("Google login successful");
     }
   } catch (error) {
-    showError("Ошибка входа через Google: ", error.message);
+    showError("Google login error: ", error.message);
   }
 }

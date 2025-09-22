@@ -1,5 +1,5 @@
 export function createLegend() {
   const legend = document.createElement("legend");
-  legend.textContent = "На какой период задача?";
+  legend.textContent = "What is the period of the task?";
   return legend;
 }

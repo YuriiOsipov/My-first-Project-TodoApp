@@ -1,0 +1,51 @@
+/* Бургер */
+.burger-button {
+  --width-burger-button: 40px;
+
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 103;
+  background-color: transparent;
+
+  border: none;
+  border-radius: 6px;
+  width: var(--width-burger-button);
+  height: 40px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(205, 205, 206);
+  }
+
+  span {
+    --width-burger-button-span: 30px;
+
+    position: absolute;
+    width: var(--width-burger-button-span);
+    height: 3px;
+    background-color: #2b2b2b;
+    left: calc(
+      (var(--width-burger-button) - var(--width-burger-button-span)) / 2
+    );
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+  }
+
+  span:nth-child(1) {
+    transform: translateY(-10px);
+  }
+
+  span:nth-child(3) {
+    transform: translateY(10px);
+  }
+}
+
+.sidebar.open .burger-button span:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
+}
+.sidebar.open .burger-button span:nth-child(2) {
+  opacity: 0;
+}
+.sidebar.open .burger-button span:nth-child(3) {
+  transform: translateY(0) rotate(-45deg);
+}

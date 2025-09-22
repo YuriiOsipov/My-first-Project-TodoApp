@@ -1,12 +1,12 @@
 export const showNotification = (message, type, customTitle) => {
   const titles = {
-    error: "Ошибка!",
-    success: "Успех!",
-    warning: "Внимание!",
-    info: "Информация",
+    error: "Error!",
+    success: "Success!",
+    warning: "Attention!",
+    info: "Information",
   };
 
-  const title = customTitle || titles[type] || "Уведомление";
+  const title = customTitle || titles[type] || "Notification";
 
   Swal.fire({
     title,
@@ -18,7 +18,7 @@ export const showNotification = (message, type, customTitle) => {
 };
 
 export const showError = (message) => {
-  showNotification(message, "error", "Ошибка!");
+  showNotification(message, "error", "Error!");
 };
 
 export const showSuccess = (message) => {
@@ -35,7 +35,7 @@ export const showInfo = (message) => {
 
 export const showConfirmation = async (
   message,
-  customTitle = "Подтвердите действие"
+  customTitle = "Confirm action"
 ) => {
   const result = await Swal.fire({
     icon: "question",
@@ -44,8 +44,8 @@ export const showConfirmation = async (
     showCancelButton: true,
     confirmButtonColor: "#3085d6",
     cancelButtonColor: "#d33",
-    confirmButtonText: "Да",
-    cancelButtonText: "Нет",
+    confirmButtonText: "Yes",
+    cancelButtonText: "No",
   });
   return result.isConfirmed;
 };

@@ -4,16 +4,16 @@ import { updateTodo } from "../../API/index.js";
 
 export async function updateTask(todo) {
   const { value: newText } = await Swal.fire({
-    title: "Редактирование задачи",
+    title: "Editing a task",
     input: "text",
-    inputLabel: "Введите текст новой задачи",
+    inputLabel: "Enter the text of the new task",
     inputValue: todo.text,
     showCancelButton: true,
-    confirmButtonText: "Сохранить",
-    cancelButtonText: "Отмена",
+    confirmButtonText: "Save",
+    cancelButtonText: "Cancel",
     inputValidator: (value) => {
       if (!value) {
-        return "Поле не может быть пустым";
+        return "The field cannot be empty";
       }
     },
   });
@@ -23,7 +23,7 @@ export async function updateTask(todo) {
       await updateTodo(todo.id, newText);
       await loadData();
     } catch (error) {
-      showError("Не удалось изменить задачу!");
+      showError("Failed to edit task!");
     }
   }
 }

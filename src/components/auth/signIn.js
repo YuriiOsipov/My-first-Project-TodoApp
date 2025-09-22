@@ -37,18 +37,12 @@ signinForm.addEventListener("submit", async (event) => {
     const user = userCredential.user;
 
     if (!user.emailVerified) {
-      showWarning(
-        "Ваш email не верифицирован. Пожалуйста, проверьте Вашу почту"
-      );
-      const resend = await showConfirmation(
-        "Отправить письмо для верификации повторно?"
-      );
+      showWarning("Your email is not verified. Please check your mail.");
+      const resend = await showConfirmation("Resend verification email?");
 
       if (resend) {
         await sendEmailVerification(user);
-        showSuccess(
-          "Письмо для верификации отправлено повторно. Проверьте Вашу почту"
-        );
+        showSuccess("Verification email resent. Check your email.");
       }
       return;
     }
@@ -60,14 +54,14 @@ signinForm.addEventListener("submit", async (event) => {
   } catch (error) {
     switch (error.code) {
       case "auth/too-many-requests":
-        showWarning("Слишком много попыток входа. Пожалуйста попробуйте позже");
+        showWarning("Too many login attempts. Please try again later.");
         break;
       case "auth/invalid-credential":
-        showWarning("Неверные учетные данные. Проверьте email и пароль");
+        showWarning("Incorrect credentials. Check your email and password.");
         break;
 
       default:
-        showWarning("Ошибка авторизации,", error.message, error.code);
+        showWarning("Authorization error", error.message, error.code);
 
         break;
     }

@@ -6,8 +6,8 @@ export function createDeleteButton(todo) {
 
   const deleteIcon = document.createElement("img");
   deleteIcon.src = "./assets/icons/icon-delete.png";
-  deleteIcon.alt = "Удалить";
-  deleteIcon.title = "Удалить";
+  deleteIcon.alt = "Delete";
+  deleteIcon.title = "Delete";
   deleteIcon.widht = 24;
 
   deleteButton.append(deleteIcon);

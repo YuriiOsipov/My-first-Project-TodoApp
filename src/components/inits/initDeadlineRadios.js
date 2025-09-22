@@ -24,7 +24,7 @@ export function initDeadlineRadios(todo, todoElement) {
           await updateTodoDeadline(todo.id, updatedFields);
           await loadData();
         } catch (error) {
-          showError("Ошибка при снятии дедлайна");
+          showError("Error removing deadline");
         }
       } else {
         const updatedFields = {
@@ -38,7 +38,7 @@ export function initDeadlineRadios(todo, todoElement) {
           await updateTodoDeadline(todo.id, updatedFields);
           await loadData();
         } catch (error) {
-          showError("Ошибка при обновлении дедлайна");
+          showError("Error updating deadline");
         }
       }
     });

@@ -24,7 +24,7 @@ export async function deleteCompletedTodos(container) {
 
       if (!deleteResponse.ok) {
         throw new Error(
-          `Не удалось удалить список выполненных. Статус: ${deleteResponse.status}`
+          `Failed to delete the list of completed. Status: ${deleteResponse.status}`
         );
       }
       todoElement.remove();

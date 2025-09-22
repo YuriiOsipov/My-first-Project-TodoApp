@@ -14,10 +14,10 @@ export const getUserInfo = () => {
           const token = await user.getIdToken();
           resolve({ uid: user.uid, token, emailVerified: user.emailVerified });
         } catch (error) {
-          reject(new Error("Не удалось получить token"));
+          reject(new Error("Failed to get token"));
         }
       } else {
-        reject(new Error("Пользователь не авторизован"));
+        reject(new Error("User is not authorized"));
       }
     });
   });

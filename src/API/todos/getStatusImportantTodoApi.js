@@ -15,7 +15,7 @@ export async function toggleTodoImportantStatus(id, important) {
 
     if (!response.ok) {
       throw new Error(
-        `Не удалось обновить статус важности задачи. Статус: ${response.status}`
+        `Failed to update task importance status. Status: ${response.status}`
       );
     }
 

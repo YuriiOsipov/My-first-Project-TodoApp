@@ -13,11 +13,11 @@ forgotPasswordForm.addEventListener("submit", async (event) => {
   try {
     await sendPasswordResetEmail(auth, email);
     forgotPasswordMessage.textContent =
-      "Письмо для сброса пароля отправлено на Ваш email";
+      "A password reset email has been sent to your email address.";
     forgotPasswordMessage.style.color = "green";
     forgotPasswordForm.style.display = "none";
   } catch (error) {
-    forgotPasswordMessage.textContent = `Ошибка: ${error.message}`;
+    forgotPasswordMessage.textContent = `Error: ${error.message}`;
     forgotPasswordMessage.style.color = "red";
   }
 });

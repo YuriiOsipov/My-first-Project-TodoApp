@@ -15,7 +15,7 @@ export async function toggleTodoStatus(id, completed) {
 
     if (!response.ok) {
       throw new Error(
-        `Не удалось обновить статус задачи. Статус: ${response.status}`
+        `Failed to update task status. Status: ${response.status}`
       );
     }
 

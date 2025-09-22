@@ -1,0 +1,18 @@
+.todo__handle:active {
+  cursor: grabbing;
+}
+
+/* handle выглядит как «решётка» */
+.todo__handle {
+  align-self: flex-start;
+  border: 0;
+  background: transparent;
+  cursor: grab;
+  font-size: 18px;
+  padding: 4px 8px;
+  user-select: none;
+  touch-action: none; /* важно для тача */
+}
+.todo__handle:active {
+  cursor: grabbing;
+}

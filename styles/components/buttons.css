@@ -1,0 +1,94 @@
+/* Кнопки */
+.button-download,
+#delete-completed-button {
+  display: block;
+  margin-inline: auto;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--color-main);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#delete-completed-button {
+  background-color: #ed3846;
+  display: none;
+}
+
+#delete-completed-button:hover {
+  background-color: #de1829;
+  transform: translateY(-2px);
+}
+
+.button-download:hover {
+  background-color: var(--color-button-hover);
+  transform: translateY(-2px);
+}
+
+.button-download:active,
+#delete-completed-button:active {
+  transform: translateY(0);
+}
+
+#google-signup-button,
+#google-signin-button {
+  height: 48px;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  background-color: var(--color-light);
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  background-image: url("../../assets/icons/icons-google.png");
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+#google-signup-button:hover,
+#google-signin-button:hover {
+  background-color: #d6d6d6;
+}
+
+/* Кнопки внутри задачи */
+
+.button-change,
+.button-function {
+  width: 62px;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 8px;
+  background-color: var(--color-light);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-function {
+  margin-inline: auto;
+}
+
+.button-function:hover {
+  transform: scale(1.1);
+}
+
+.logout-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: var(--color-main);
+  color: var(--color-primary);
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 101;
+
+  &:hover {
+    background-color: var(--color-button-hover);
+  }
+}

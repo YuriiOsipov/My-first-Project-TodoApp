@@ -6,7 +6,7 @@ export async function addNewTodo(taskInput) {
   const newTodoText = taskInput.value.trim();
 
   if (!newTodoText) {
-    showWarning("Введите текст задачи!");
+    showWarning("Enter the task text!");
     return;
   }
 
@@ -22,11 +22,9 @@ export async function addNewTodo(taskInput) {
 
   try {
     await addTodo(newTodo);
-    console.log("Задача добавлена");
     taskInput.value = "";
     await loadData();
   } catch (error) {
-    console.error(`Ошибка добавления:`, error.message);
-    showError("Не удалось добавить задачу!");
+    showError("Failed to add task!");
   }
 }
